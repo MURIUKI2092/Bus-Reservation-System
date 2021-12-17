@@ -9,10 +9,13 @@ import {
 import './App.css';
 import SignUp from "./containers/SignUp"
 import SignIn from './containers/SignIn';
+import NavigationBar from "./components/navbar";
 
 function App() {
   return (
+    
     <Router>
+      <NavigationBar></NavigationBar>
       <div>
         <nav>
           <ul>
