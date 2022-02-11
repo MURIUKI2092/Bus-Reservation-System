@@ -1,40 +1,27 @@
 import React from "react"
 import {
   BrowserRouter as Router,
-  Routes,
+  /* Routes,
   Route,
-  Link
+  Link */
 } from "react-router-dom";
-
+import './style.css';
 import './App.css';
-import SignUp from "./containers/SignUp"
-import SignIn from './containers/SignIn';
+/* import SignUp from "./containers/SignUp"
+import SignIn from './containers/SignIn'; */
 import NavigationBar from "./components/navbar";
+import Footer from "./components/footer";
+import MainContainer from "./containers/main";
 
 function App() {
   return (
     
     <Router>
       <NavigationBar></NavigationBar>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/signin">Signin</Link>
-            </li>
-            <li>
-              <Link to="/signup">Signup</Link>
-            </li>
-          </ul>
-        </nav>
+      <MainContainer>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Routes>
-          <Route path="/signup" element={<SignUp />} />            
-          <Route path="/signin" element={<SignIn />} />            
-        </Routes>
-      </div>
+      </MainContainer>
+      <Footer/>
     </Router>
   );
 }
