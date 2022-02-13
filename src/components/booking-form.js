@@ -21,7 +21,7 @@ const towns=[
 ]
 const BookingForm=(props)=>{
     return(
-        <section className="mainBooking">
+        <section className="mainBooking"  style={{backgroundColor:'#fff', marginBottom:'-100px'}}>
             <div className="bookingHeader">
             <h3>BOOK YOUR TRIP</h3>
             </div>

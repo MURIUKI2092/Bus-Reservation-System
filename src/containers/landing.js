@@ -1,14 +1,17 @@
 import React, { Fragment } from "react";
 import BookingForm from "../components/booking-form";
 /* import { FontAwesomeIcon} from "@fortawesome/react-fontawesome" */
+import hd from "../images/head.jpg"
+
+
 
 const LandPage=({children})=>{
     return(
         <Fragment>
-            <div> 
-               
+            <div style={{backgroundImage:`url(${hd})`,backgroundPosition:'absolute', backgroundSize:'cover', backgroundRepeat:'no-repeat',padding:'10px', minHeight:'55vh'}}>
+                <p>lorem dsfsd f sdf sd fsdfsdfs d f  dsfsd f sdfsdf</p>
             </div>
-            <div>{children}</div>
+            <div style={{marginTop:'-150px'}}>{children}</div>
             <section className="landInfo">
         
                 <div className="ourDrivers">
