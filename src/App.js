@@ -1,28 +1,33 @@
-import React from "react"
+import React, { Fragment } from "react"
 import {
   BrowserRouter as Router,
+  Switch,Route
   /* Routes,
-  Route,
+  
   Link */
 } from "react-router-dom";
 import './style.css';
 import './App.css';
-/* import SignUp from "./containers/SignUp"
-import SignIn from './containers/SignIn'; */
 import NavigationBar from "./components/navbar";
 import Footer from "./components/footer";
 import MainContainer from "./containers/main";
+import TheRoutes from "./components/routes";
+
+
+
+
 
 function App() {
   return (
     
-    <Router>
+    <Fragment>
       <NavigationBar></NavigationBar>
       <MainContainer>
-
+       <TheRoutes/>
+        
       </MainContainer>
       <Footer/>
-    </Router>
+    </Fragment>
   );
 }
 

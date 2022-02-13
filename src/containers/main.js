@@ -4,6 +4,7 @@ const MainContainer=({children})=>{
     return(
         <section className="main">
             {children}
+            
         </section>
 
     );

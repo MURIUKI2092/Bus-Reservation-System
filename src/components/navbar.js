@@ -17,7 +17,7 @@ import { themeOptions } from '../utils/theme';
 
 
 const pages = ['Home','Book Now', 'View buses'];
-const settings = ['signIn/signup','view Profile',  'Dashboard', 'Logout'];
+const settings = ['signIn','signup','view Profile',  'Dashboard', 'Logout'];
 const theme = themeOptions;
 const NavigationBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
