@@ -3,6 +3,9 @@
     margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
 }
+input{
+    font-size: 20px;
+}
 .main{
     height: 140vh;
     
@@ -136,8 +139,197 @@ li{
        width: 70%;
     
 }
+.travelCard ,.printingTickets,.congratulations,.ContactDetails,.passengerDetails,.ticketDetails{
+    height: auto;
+    background-color:whitesmoke;
+    width: 50%;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius:20px;
+   
+    
+}
+.cardHeaderDetails p{
+    
+    align-items: center;
+    margin-top: 15px;
+}
+.travelCardPrice h4{
+    color: red;
+}
 
+.cardHeaderDetails{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 10px;
+}
+.cardOtherDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    padding: 10px;
+}
+.travelCard ul,p,h5{
+    color:rgb(175, 169, 169) ;
+}
+/* .travelCard :hover{
+    transform:scale(0.7)
+} */
 
+.ContactDetails form{
+    padding: 10px;
+    width: 100%;
+
+}
+.ContactDetails form input,.passengerName input{
+    height: 40%;
+    padding: 20px;
+    width: 90%;
+    border:none;
+    border-bottom: 1px solid #8d8e8f;
+    padding: 5px 10px;
+    outline: none;   
+}
+.ContactDetails form input, .passengerName input:focus{
+    
+    border-color: rgb(23, 24, 23)
+}
+.passenger{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}   
+.passengerName,.passengerOtherDetails,.passengerName h5{
+    margin-top: 20px;
+}
+.passengerOtherDetails{
+    display: grid;
+    grid-template-columns: 0.6fr 2fr ;
+    justify-content: space-between;
+}
+.passengerName input{
+    height: 20px;
+    
+}
+.passengerOtherDetails input{
+    height: 40%;
+    padding: 20px;
+    width: 90%;
+    border:none;
+    border-bottom: 1px solid #8d8e8f;
+    padding: 5px 10px;
+    outline: none;   
+}
+.passengerOtherDetails button{
+    width: 70px;
+    height: 20px;
+    border: 1px solid rgb(237, 230, 230);
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.buttonMale{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.passengerGender h5{
+    margin-left: 20px;
+    
+}
+.passengerGender{
+    margin-top: 10px;
+}
+
+.busRoute{
+    text-align: center;
+}
+.travelItems{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+    width: 80%;
+    border-bottom:1px solid rgb(237, 230, 230) ;
+}
+.travelItemsBusName,.travelItemsBusNameSeatNo{
+    padding: 10px;
+}
+.travelItemsBookingDetails{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+    width: 80%;
+    border-bottom:2.5px dotted rgb(237, 230, 230) ;
+
+}
+.fareDetails{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+    width: 80%;
+    font-size: 20px;
+
+}
+.ticketDetails{
+    border: 1px solid rgb(94, 93, 93);
+}
+.printShare{
+    display: grid;
+    grid-template-columns:4fr 1fr;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+    width: 80%;
+}
+.printingTickets button{
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20%;
+    margin-left: 15%;
+    color:rgb(233, 67, 67) ;
+    
+    width: 70%;
+    margin-top: 35px;
+    
+    height: 40px;
+    
+    border: 1px solid rgb(233, 67, 67);
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.printingTickets button :hover{
+    border: 1px solid rgb(237, 43, 43);
+    color:rgb(243, 43, 43) ;
+    transform: scale(0.9);
+
+}
+.congratulations{
+
+    text-align: center;
+}
+.congratulations h2{
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(44, 232, 44);
+}
+.congratulations p{
+    font-size: 16px;
+}
 @media (max-width: 700px) {
     .footer{
         margin-left: -40px;

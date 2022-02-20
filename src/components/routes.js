@@ -12,6 +12,7 @@ const TheRoutes=()=>{
         <Route exact path="/" element={<LandingPage />} />
         <Route exact  path="login" element={<SignIn />}/>
         <Route exact path="register" element={<SignUp/>} />
+        
           
        
       </Routes>

@@ -45,13 +45,10 @@ const BookingForm=(props)=>{
                             options={towns}/>
                         </div>
                         <div className="date">
-                            <h5>Leaving:(optional)</h5>
+                            <h5>Leaving:</h5>
                             <input type={"date"} placeholder="Leaving"/>
                         </div>
-                        <div className="date">
-                            <h5>Return:(optional)</h5>
-                            <input type={"date"} placeholder="Return"/>
-                        </div>
+                        
                    </div>
                    <div className="bookContentAlignment2">
                         <div className="bookContentAlignment2content">
@@ -61,7 +58,7 @@ const BookingForm=(props)=>{
                             defaultValue={options[0]} />
                         </div>
                         <div className="bookContentAlignment2content">
-                        <button type="submit" placeholder="">GET MY TICKETS</button>
+                        <button type="submit" placeholder=""><strong>SEARCH</strong></button>
                         </div>
                    </div>
                    

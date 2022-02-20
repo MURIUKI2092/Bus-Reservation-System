@@ -11,10 +11,13 @@ import './App.css';
 import NavigationBar from "./components/navbar";
 import Footer from "./components/footer";
 import MainContainer from "./containers/main";
+//import TravelCard from "./components/travelcard"
 import TheRoutes from "./components/routes";
-
-
-
+import PassengerDetail from "./components/pasengerDetails";
+import TicketDetails from "./components/ticketDetails";
+import PrintingTickets from "./components/printingTickets";
+import Congratulations from "./components/congratulations";
+//import  ContactDetails from './components/ContactInfo'
 
 
 function App() {
@@ -23,7 +26,8 @@ function App() {
     <Fragment>
       <NavigationBar></NavigationBar>
       <MainContainer>
-       <TheRoutes/>
+      
+       <Congratulations/>
         
       </MainContainer>
       <Footer/>
