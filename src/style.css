@@ -139,7 +139,7 @@ li{
        width: 70%;
     
 }
-.travelCard ,.printingTickets,.congratulations,.ContactDetails,.passengerDetails,.ticketDetails{
+.travelCard ,.proceedDetails,.printingTickets,.congratulations,.ContactDetails,.passengerDetails,.ticketDetails{
     height: auto;
     background-color:whitesmoke;
     width: 50%;
@@ -330,6 +330,43 @@ li{
 .congratulations p{
     font-size: 16px;
 }
+.circle{
+    background: #e3e3e3;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #6e6e6e;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 20px;
+    margin-right: 5px;
+    text-align: center;
+    width: 20px;
+}
+.proceedDetails{
+    background-color: rgb(67, 65, 65);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1.5fr;
+}
+.proceedDetails h5{
+    font-size: 13px;
+}
+.proceedDetails p{
+    font-size: 17px;
+    font-weight: bolder;
+}
+.proceedDetails button{
+    background-color: rgb(243, 43, 43);
+    width: 70%;
+    color: white;
+    margin-left: 20px;
+    
+    height: 40px;
+    
+    border: 1px solid rgb(233, 67, 67);
+    border-radius: 5px;
+    cursor: pointer;
+}    
 @media (max-width: 700px) {
     .footer{
         margin-left: -40px;

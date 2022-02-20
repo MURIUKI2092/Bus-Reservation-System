@@ -17,6 +17,9 @@ import PassengerDetail from "./components/pasengerDetails";
 import TicketDetails from "./components/ticketDetails";
 import PrintingTickets from "./components/printingTickets";
 import Congratulations from "./components/congratulations";
+import Booked from "./containers/booked";
+import UserDetails from "./containers/passengerDetail";
+import Proceed from "./components/proceed";
 //import  ContactDetails from './components/ContactInfo'
 
 
@@ -27,7 +30,7 @@ function App() {
       <NavigationBar></NavigationBar>
       <MainContainer>
       
-       <Congratulations/>
+       <UserDetails/>
         
       </MainContainer>
       <Footer/>
