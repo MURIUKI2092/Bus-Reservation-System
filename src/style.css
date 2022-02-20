@@ -111,7 +111,7 @@ li{
 }
 
 .landInfo{
-    height: 100px;
+    min-height: 100px;
     margin-left: 25px;
     margin-top: 15%;
     display: grid;
