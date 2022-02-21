@@ -19,8 +19,9 @@ import { NavLink } from "react-router-dom";
 const pages = [{ name: "Home", url: "/" }];
 
 const settings = [
-  { name: "signIn", url: "/signin" },
-  { name: "signUp", url: "/signup" },
+  { name: "sign in", url: "/signin" },
+  { name: "sign up", url: "/signup" },
+  { name: "Log out", url: "/logout"},
 ];
 const theme = themeOptions;
 const NavigationBar = () => {

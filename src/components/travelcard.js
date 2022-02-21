@@ -4,16 +4,28 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import { red } from "@mui/material/colors";
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
-
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
 import PassengerDetail from "./pasengerDetails";
-import ContactDetails from "./ContactInfo";
 
-const TravelCard = () => {
+const TravelCard = ({ data }) => {
+  console.log(`The data ${data.name}`);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "1px solid #000",
+    borderRadius: "5px",
+    boxShadow: 24,
+    p: 4,
+    overflow: "scroll",
+  };
 
   return (
     <>
@@ -28,9 +40,17 @@ const TravelCard = () => {
             }}
           >
             <Typography variant="h5" color="#000">
-              Intercity Travels
+              {data.name}
             </Typography>
-            <Typography sx={{ color: red[600] }}>Kes 500</Typography>
+            <Typography
+              sx={{ color: red[600] }}
+              style={{
+                margin: "auto 0 auto 0",
+                fontWeight: "600",
+              }}
+            >
+              KES {data.price}
+            </Typography>
           </div>
           <div
             style={{
@@ -63,7 +83,7 @@ const TravelCard = () => {
                 margin: "0 1rem 0 1rem",
               }}
             >
-              1 rest stop
+              {data.rest_stop} rest stop
             </Typography>
             <Typography
               style={{
@@ -72,7 +92,7 @@ const TravelCard = () => {
                 marginLeft: "auto",
               }}
             >
-              30 seats
+              {data.seats} seats
             </Typography>
           </div>
           <div
@@ -159,14 +179,13 @@ const TravelCard = () => {
           </div>
         </CardContent>
       </Card>
-
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box>
+        <Box sx={style}>
           <PassengerDetail />
         </Box>
       </Modal>

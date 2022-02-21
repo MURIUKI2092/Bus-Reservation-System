@@ -6,25 +6,17 @@ import NavigationBar from "./components/navbar";
 import Footer from "./components/footer";
 import MainContainer from "./containers/main";
 import { routes } from "./routes";
+import { useRoutes } from "react-router-dom";
+import { isLoggedIn } from "./utils/auth";
 
 const App = (props) => {
+  console.log(`Logged is ${isLoggedIn()}`)
+  const routing = useRoutes(routes(isLoggedIn()));
+
   return (
     <Fragment>
       <NavigationBar />
-      <MainContainer>
-          <Routes>
-            {routes.map((route) => {
-              return (
-                <Route
-                  exact={route.exact}
-                  path={route.path}
-                  key={route.path}
-                  element={route.component}
-                />
-              );
-            })}
-          </Routes>
-      </MainContainer>
+      <MainContainer>{routing}</MainContainer>
       <Footer />
     </Fragment>
   );

@@ -13,20 +13,28 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { ThemeProvider } from "@mui/material/styles";
 import { themeOptions } from "../utils/theme";
-
+import { handleRegistration } from "../utils/auth";
+import { useNavigate } from 'react-router-dom';
 
 
 const theme = themeOptions;
 
-const SignUp=()=> {
+
+const SignUp = () => {
+
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    console.log({
+    const submit_data = {
       email: data.get("email"),
       password: data.get("password"),
-    });
+      first_name: data.get("first_name"),
+      last_name: data.get("last_name"),
+    };
+    handleRegistration(submit_data, navigate);
   };
 
   return (
@@ -57,7 +65,7 @@ const SignUp=()=> {
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="first_name"
                   required
                   fullWidth
                   id="firstName"
@@ -71,7 +79,7 @@ const SignUp=()=> {
                   fullWidth
                   id="lastName"
                   label="Last Name"
-                  name="lastName"
+                  name="last_name"
                   autoComplete="family-name"
                 />
               </Grid>
@@ -101,7 +109,7 @@ const SignUp=()=> {
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="I agree to the Terms and Conditions"
                 />
               </Grid>
             </Grid>
@@ -122,10 +130,9 @@ const SignUp=()=> {
             </Grid>
           </Box>
         </Box>
-        
       </Container>
     </ThemeProvider>
   );
-}
+};
 
-export default SignUp
+export default SignUp;
