@@ -1,14 +1,18 @@
 import React from 'react';
+import Button from '@mui/material/Button';
+import PrintIcon from '@mui/icons-material/Print';
+import ShareIcon from '@mui/icons-material/Print';
+
 
 const PrintingTickets =()=>{
   return (
     <section className='printingTickets'>
       <div className='printShare'>
         <div className='print'>
-          <h3>Print</h3>
+       < Button variant="contained" endIcon={<PrintIcon />}>Print</Button>
         </div>
         <div className='share'>
-          <h3>Share</h3>
+        < Button variant="contained" endIcon={<ShareIcon />}>Share</Button>
         </div>
       </div>
       <button type={"submit"} > Book Another Ticket</button>

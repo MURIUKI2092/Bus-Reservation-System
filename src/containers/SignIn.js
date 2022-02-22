@@ -13,20 +13,24 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { ThemeProvider } from "@mui/material/styles";
 import { themeOptions } from "../utils/theme";
-
-
+import { handleLogin } from "../utils/auth";
+import { useNavigate } from 'react-router-dom';
 
 const theme = themeOptions;
 
-const SignIn=()=> {
+const SignIn = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    console.log({
+
+    const submit_data = {
       email: data.get("email"),
       password: data.get("password"),
-    });
+    };
+    handleLogin(submit_data, navigate);
   };
 
   return (
@@ -99,9 +103,8 @@ const SignIn=()=> {
             </Grid>
           </Box>
         </Box>
-        
       </Container>
     </ThemeProvider>
   );
-}
+};
 export default SignIn;
