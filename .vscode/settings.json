@@ -1,0 +1,5 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.minimap.side": "right",
+  "workbench.activityBar.iconClickBehavior": "focus"
+}
