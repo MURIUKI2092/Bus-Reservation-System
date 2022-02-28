@@ -1,41 +1,49 @@
-import React, { Fragment } from "react"
-import {
-  BrowserRouter as Router,
-  Switch,Route
-  /* Routes,
-  
-  Link */
-} from "react-router-dom";
-import './style.css';
-import './App.css';
+import React, { Fragment } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import "./style.css";
+import "./App.css";
 import NavigationBar from "./components/navbar";
 import Footer from "./components/footer";
 import MainContainer from "./containers/main";
-//import TravelCard from "./components/travelcard"
-import TheRoutes from "./components/routes";
-import PassengerDetail from "./components/pasengerDetails";
-import TicketDetails from "./components/ticketDetails";
-import PrintingTickets from "./components/printingTickets";
-import Congratulations from "./components/congratulations";
-import Booked from "./containers/booked";
-import UserDetails from "./containers/passengerDetail";
-import Proceed from "./components/proceed";
-//import  ContactDetails from './components/ContactInfo'
+import ProfileHeader from './components/profileHeader';
 
+import { routes } from "./routes";
+<<<<<<< HEAD
+import EditableDetails from "./components/editable";
+=======
+import { useRoutes } from "react-router-dom";
+import { isLoggedIn } from "./utils/auth";
+>>>>>>> df3d904c55c42a099f901e2f5ece3226c7a80b15
 
-function App() {
+const App = (props) => {
+  console.log(`Logged is ${isLoggedIn()}`)
+  const routing = useRoutes(routes(isLoggedIn()));
+
   return (
-    
     <Fragment>
-      <NavigationBar></NavigationBar>
+      <NavigationBar />
+<<<<<<< HEAD
       <MainContainer>
-      
-       <UserDetails/>
-        
+          {/* <Routes>
+            {routes.map((route) => {
+              return (
+                <Route
+                  exact={route.exact}
+                  path={route.path}
+                  key={route.path}
+                  element={route.component}
+                />
+              );
+            })}
+          </Routes> */}
+          <EditableDetails/>
       </MainContainer>
-      <Footer/>
+=======
+      <MainContainer>{routing}</MainContainer>
+>>>>>>> df3d904c55c42a099f901e2f5ece3226c7a80b15
+      <Footer />
     </Fragment>
   );
-}
+};
 
 export default App;
