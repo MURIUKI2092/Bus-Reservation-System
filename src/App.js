@@ -1,41 +1,40 @@
-import React from "react"
+import React, { Fragment } from "react"
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
+  Switch,Route
+  /* Routes,
+  
+  Link */
 } from "react-router-dom";
-
+import './style.css';
 import './App.css';
-import SignUp from "./containers/SignUp"
-import SignIn from './containers/SignIn';
 import NavigationBar from "./components/navbar";
+import Footer from "./components/footer";
+import MainContainer from "./containers/main";
+//import TravelCard from "./components/travelcard"
+import TheRoutes from "./components/routes";
+import PassengerDetail from "./components/pasengerDetails";
+import TicketDetails from "./components/ticketDetails";
+import PrintingTickets from "./components/printingTickets";
+import Congratulations from "./components/congratulations";
+import Booked from "./containers/booked";
+import UserDetails from "./containers/passengerDetail";
+import Proceed from "./components/proceed";
+//import  ContactDetails from './components/ContactInfo'
+
 
 function App() {
   return (
     
-    <Router>
+    <Fragment>
       <NavigationBar></NavigationBar>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/signin">Signin</Link>
-            </li>
-            <li>
-              <Link to="/signup">Signup</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Routes>
-          <Route path="/signup" element={<SignUp />} />            
-          <Route path="/signin" element={<SignIn />} />            
-        </Routes>
-      </div>
-    </Router>
+      <MainContainer>
+      
+       <UserDetails/>
+        
+      </MainContainer>
+      <Footer/>
+    </Fragment>
   );
 }
 
